@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PT XYZ"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"/>
+
+
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/companyName"
+        android:layout_alignStart="@id/companyName"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/baseline_location_on_25"
+        />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleman"
+        android:layout_below="@id/companyName"
+        android:layout_toEndOf="@id/map"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/info_box"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location"
+        android:background="@drawable/rounded_border"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/info_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informasi perubahan data katalog"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/relative_PembaruanT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_judul"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/pembaruan_terakhir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pembaruan terakhir:"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16-06-2022 15:00:01"
+                android:layout_toRightOf="@id/pembaruan_terakhir"
+                android:textColor="#FF6F00"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relativepembaruanS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relative_PembaruanT"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/pembaruan_selanjutnya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pembaruan Selanjutnya:"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17-06-2022 15:00:01"
+                android:textSize="14sp"
+                android:textColor="#FF6F00"
+                android:layout_toRightOf="@id/pembaruan_selanjutnya"/>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchCard"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@id/info_box"
+        android:layout_alignStart="@id/info_box"
+        android:layout_marginTop="50dp"
+        app:cardElevation="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/gambarSearch"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/baseline_manage_search_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Katalog Tender"
+                android:layout_below="@id/gambarSearch"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/addedCard"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@id/info_box"
+        android:layout_alignEnd="@id/info_box"
+        android:layout_marginTop="50dp"
+        app:cardElevation="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/gambarAdded"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/baseline_bookmark_added_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tender tersimpan"
+                android:layout_below="@id/gambarAdded"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/statisticCard"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@id/searchCard"
+        android:layout_alignStart="@id/searchCard"
+        android:layout_marginTop="20dp"
+        app:cardElevation="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/gambarStatistic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/baseline_insert_chart_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laporan Statistik"
+                android:layout_below="@id/gambarStatistic"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/setingsCard"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@id/addedCard"
+        android:layout_alignEnd="@id/addedCard"
+        android:layout_marginTop="20dp"
+        app:cardElevation="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/gambarSetings"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/baseline_settings_24"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengaturan"
+                android:layout_below="@id/gambarSetings"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
